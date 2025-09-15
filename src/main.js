@@ -1,24 +1,24 @@
 import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
-
+import github from "/github.svg";
+import { setupContent } from "./content.js";
+import { setupNew } from "./new.js";
 document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
+  <div class="main"> 
     <p class="read-the-docs">
-      Click on the Vite logo to learn more
+      <strong>query link</strong>
+      <br>
+      мультиссылка бесплатно и без регистрации
     </p>
+
+    <div id="content"></div>
+    
+      <div id="new"></div>
+
+      <a href="https://github.com/Sanevs22/query-link" target="_blank">
+      <img src="${github}" class="logo" alt="github logo" />
+    </a>
   </div>
 `;
 
-setupCounter(document.querySelector("#counter"));
+setupContent(document.querySelector("#content"));
+setupNew(document.querySelector("#new"));
